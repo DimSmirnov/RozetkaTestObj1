@@ -1,6 +1,7 @@
 package com.roz;
 
 
+import org.junit.After;
 import org.junit.Assert;
 import org.junit.Before;
 import org.junit.Test;
@@ -36,8 +37,13 @@ public class SuperTest {
         searchResultPage.hoverNoutInformLink();
         searchResultPage.clickVideoLink();
 
-        videoPage.checkText();
+        String checkText = videoPage.checkText();
+        Assert.assertEquals(checkText, "Подпишитесь на наш канал!");
+    }
 
-        //Assert.assertTrue(text, "Подпишитесь на наш канал!");
+    @After
+    public void postcondition(){
+
+        driver.quit();
     }
 }

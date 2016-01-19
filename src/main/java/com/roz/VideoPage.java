@@ -11,8 +11,8 @@ public class VideoPage {
         this.driver = driver;
     }
 
-    public VideoPage checkText(){
+    public String checkText(){
         String text = driver.findElement(By.xpath("//h3[text()='Подпишитесь на наш канал!']")).getText();
-        return this;
+        return text;
     }
 }
