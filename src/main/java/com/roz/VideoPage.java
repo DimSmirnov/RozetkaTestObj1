@@ -8,6 +8,7 @@ public class VideoPage {
     private WebDriver driver;
 
     public VideoPage(WebDriver driver){
+
         this.driver = driver;
     }
 

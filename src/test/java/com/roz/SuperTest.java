@@ -33,9 +33,11 @@ public class SuperTest {
         //driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
         homePage.hoverNoutsLink1();
         homePage.clickNoutsLink2();
+        Thread.sleep(2000);
 
         searchResultPage.hoverNoutInformLink();
         searchResultPage.clickVideoLink();
+        Thread.sleep(2000);
 
         String checkText = videoPage.checkText();
         Assert.assertEquals(checkText, "Подпишитесь на наш канал!");
